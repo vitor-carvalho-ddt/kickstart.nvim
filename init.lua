@@ -164,6 +164,11 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- GO TO NEXT BUFFER ON WINDOW
+vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = '[B]uffer [N]ext on current window' })
+-- GO TO PREVIOUS BUFFER ON WINDOW
+vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = '[B]uffer [P]revious on current window' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 

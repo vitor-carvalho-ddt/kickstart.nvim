@@ -261,6 +261,20 @@ require('lazy').setup({
     },
   },
 
+  -- Example with Lazy
+  {
+    'famiu/bufdelete.nvim',
+    keys = {
+      {
+        '<leader>bd',
+        function()
+          require('bufdelete').bufdelete(0, true)
+        end,
+        desc = '[B]uffer [D]elete (no window close)',
+      },
+    },
+  },
+
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
@@ -418,6 +432,7 @@ require('lazy').setup({
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
       vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = '[ ] Live Grep current project' })
       vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, { desc = '[/] Fuzzy Find current Buffer' })
+      vim.keymap.set('n', '<leader>sb', builtin.buffers, { desc = 'Search Open [B]uffers' })
       -- DEFAULT FUZZY FIND CONFIG
       -- -- Slightly advanced example of overriding default behavior and theme
       -- vim.keymap.set('n', '<leader>/', function()

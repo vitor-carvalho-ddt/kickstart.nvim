@@ -8,16 +8,17 @@ return {
   config = function()
     require('bufferline').setup {
       options = {
-      always_show_bufferline = true,
-      offsets = {
-        {
-          filetype = "neo-tree",
-          text="Neo Tree",
-          separator= true,
-          text_align = "left",
-        }
+        always_show_bufferline = true,
+        show_buffer_icons = true,
+        offsets = {
+          {
+            filetype = 'neo-tree',
+            text = 'Neo Tree',
+            separator = true,
+            text_align = 'left',
+          },
+        },
       },
     }
-  }
   end,
 }

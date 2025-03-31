@@ -175,6 +175,9 @@ vim.keymap.set('n', '<S-k>', ':m .-2<CR>==', { desc = 'Move current line Up' })
 -- MOVE LINE DOWN
 vim.keymap.set('n', '<S-j>', ':m .+1<CR>==', { desc = 'Move current line Down' })
 
+-- ZENMODE
+vim.keymap.set('n', '<leader>zm', ':ZenMode<CR>', { desc = 'Open [Z]en [M]ode ' })
+
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
@@ -952,6 +955,7 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.zen-mode',
+  require 'kickstart.plugins.nvim-web-dev-icons',
   require 'kickstart.plugins.bufferline',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
@@ -978,6 +982,7 @@ require('lazy').setup({
       start = '🚀',
       task = '📌',
       lazy = '💤 ',
+      e,
     },
   },
 })

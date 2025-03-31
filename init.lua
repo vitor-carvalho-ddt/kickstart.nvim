@@ -98,6 +98,8 @@ vim.g.have_nerd_font = false
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+-- Setting bufferline
+vim.opt.termguicolors = true
 -- Make line numbers default
 vim.opt.number = true
 -- You can also add relative line numbers, to help with jumping.
@@ -168,6 +170,10 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = '[B]uffer [N]ext on current window' })
 -- GO TO PREVIOUS BUFFER ON WINDOW
 vim.keymap.set('n', '<leader>bp', ':bp<CR>', { desc = '[B]uffer [P]revious on current window' })
+-- MOVE LINE UP
+vim.keymap.set('n', '<S-k>', ':m .-2<CR>==', { desc = 'Move current line Up' })
+-- MOVE LINE DOWN
+vim.keymap.set('n', '<S-j>', ':m .+1<CR>==', { desc = 'Move current line Down' })
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
@@ -945,6 +951,8 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.zen-mode',
+  require 'kickstart.plugins.bufferline',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

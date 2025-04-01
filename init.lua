@@ -98,7 +98,7 @@ vim.g.have_nerd_font = true
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
--- Setting bufferline
+-- Setting bufferline termguicolors
 vim.opt.termguicolors = true
 -- Make line numbers default
 vim.opt.number = true
@@ -165,6 +165,9 @@ vim.opt.scrolloff = 10
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+
+-- MAPPING REDO
+vim.keymap.set('n', '<C-r>', ':redo<CR>', { desc = 'Redo an action' })
 
 -- GO TO NEXT BUFFER ON WINDOW
 vim.keymap.set('n', '<leader>bn', ':bn<CR>', { desc = '[B]uffer [N]ext on current window' })

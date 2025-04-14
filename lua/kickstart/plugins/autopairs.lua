@@ -4,13 +4,27 @@
 return {
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
-  -- Optional dependency
   dependencies = { 'hrsh7th/nvim-cmp' },
   config = function()
-    require('nvim-autopairs').setup {}
-    -- If you want to automatically add `(` after selecting a function or method
+    -- 1) Basic autopairs setup
+    require('nvim-autopairs').setup {
+      fast_wrap = {
+        map = '<M-e>', -- The key to trigger "Fast Wrap" (example: Alt+e) M is for Meta key, same for Alt nowadays
+        chars = { '{', '[', '(', '"', "'" },
+        pattern = [=[[%'%"%)%>%]%)%}%,]]=],
+        offset = 0, -- Offset from pattern match
+        end_key = '$', -- Key to end "Fast Wrap" selection
+        keys = 'asdfghjkl;', -- Keys in the popup for selecting an insert position
+        check_comma = true,
+        highlight = 'PmenuSel',
+        highlight_grey = 'LineNr',
+      },
+    }
+
+    -- 2) Automatically add "(" after completing a function or method
     local cmp_autopairs = require 'nvim-autopairs.completion.cmp'
     local cmp = require 'cmp'
+
     cmp.event:on('confirm_done', cmp_autopairs.on_confirm_done())
   end,
 }

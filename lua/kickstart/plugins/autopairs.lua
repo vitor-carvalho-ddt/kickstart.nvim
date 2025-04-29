@@ -9,7 +9,7 @@ return {
     -- 1) Basic autopairs setup
     require('nvim-autopairs').setup {
       fast_wrap = {
-        map = '<M-e>', -- The key to trigger "Fast Wrap" (example: Alt+e) M is for Meta key, same for Alt nowadays
+        map = '<C-e>', -- The key to trigger "Fast Wrap" CTRL+e
         chars = { '{', '[', '(', '"', "'" },
         pattern = [=[[%'%"%)%>%]%)%}%,]]=],
         offset = 0, -- Offset from pattern match

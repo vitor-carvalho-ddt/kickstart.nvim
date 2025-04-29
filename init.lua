@@ -97,6 +97,8 @@ vim.g.have_nerd_font = true
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+--  Remove Line Wrap
+vim.opt.wrap = false
 
 -- Setting bufferline termguicolors
 vim.opt.termguicolors = true
@@ -183,6 +185,14 @@ vim.keymap.set('n', '<leader>zm', ':ZenMode<CR>', { desc = 'Open [Z]en [M]ode ' 
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+
+-- Toggle CSVView
+vim.keymap.set(
+  'n',
+  '<leader>csv',
+  ":CsvViewToggle delimiter=, quote_char=' comment=# display_mode=border<CR>",
+  { desc = 'Toggle CSV View with comma delimiter and quote char with border' }
+)
 
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
@@ -960,6 +970,7 @@ require('lazy').setup({
   require 'kickstart.plugins.zen-mode',
   require 'kickstart.plugins.nvim-web-dev-icons',
   require 'kickstart.plugins.bufferline',
+  require 'kickstart.plugins.csvview',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

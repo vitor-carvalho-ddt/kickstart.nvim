@@ -168,6 +168,20 @@ vim.opt.scrolloff = 10
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- Copy Current Full File Path to Clipboard
+vim.keymap.set('n', '<leader>cfp', function()
+  local path = vim.fn.expand '%:p'
+  vim.fn.setreg('+', path)
+  print('Copied path: ' .. path)
+end, { desc = 'Copy full file path' })
+
+-- Copy Current Relative File Path to Clipboard
+vim.keymap.set('n', '<leader>crfp', function()
+  local path = vim.fn.expand '%'
+  vim.fn.setreg('+', path)
+  print('Copied path: ' .. path)
+end, { desc = 'Copy relative file path' })
+
 -- MAPPING REDO
 vim.keymap.set('n', '<C-r>', ':redo<CR>', { desc = 'Redo an action' })
 

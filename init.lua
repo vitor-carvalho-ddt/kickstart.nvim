@@ -979,7 +979,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.neo-tree',
-  require 'kickstart.plugins.auto-session',
+  require 'kickstart.plugins.persistence',
   require 'kickstart.plugins.autopairs',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.zen-mode',

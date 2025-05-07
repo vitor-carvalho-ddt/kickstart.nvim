@@ -63,7 +63,7 @@ return {
       'NvimTree',
       'Trouble',
       'help',
-      'qf', -- quickfix
+      -- 'qf', -- quickfix
       'prompt',
     }
 
@@ -71,7 +71,7 @@ return {
       'nofile',
       'terminal',
       'prompt',
-      'quickfix',
+      -- 'quickfix',
       'help',
     }
 

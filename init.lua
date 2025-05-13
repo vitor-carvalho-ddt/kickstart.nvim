@@ -167,6 +167,8 @@ vim.opt.scrolloff = 10
 
 -- Opening fterm
 vim.keymap.set('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open FTerm (Floating Terminal)' })
+-- Opening Neogit
+vim.keymap.set('n', '<leader>ng', ':Neogit<CR>', { desc = 'Open Neogit' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -995,6 +997,7 @@ require('lazy').setup({
   require 'kickstart.plugins.bufferline',
   require 'kickstart.plugins.csvview',
   require 'kickstart.plugins.fterm',
+  require 'kickstart.plugins.neogit',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

@@ -163,6 +163,10 @@ vim.opt.scrolloff = 10
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
+--
+
+-- Opening fterm
+vim.keymap.set('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open FTerm (Floating Terminal)' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
@@ -990,6 +994,7 @@ require('lazy').setup({
   require 'kickstart.plugins.nvim-web-dev-icons',
   require 'kickstart.plugins.bufferline',
   require 'kickstart.plugins.csvview',
+  require 'kickstart.plugins.fterm',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

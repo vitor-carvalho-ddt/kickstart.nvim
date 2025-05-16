@@ -100,6 +100,13 @@ vim.g.have_nerd_font = true
 --  Remove Line Wrap
 vim.opt.wrap = false
 
+-- Enable autoread and set up checking triggers
+vim.opt.autoread = true
+vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter' }, {
+  command = "if mode() != 'c' | checktime | endif",
+  pattern = '*',
+})
+
 -- Setting bufferline termguicolors
 vim.opt.termguicolors = true
 -- Make line numbers default

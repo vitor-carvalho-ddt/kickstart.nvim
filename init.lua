@@ -174,7 +174,11 @@ vim.opt.scrolloff = 10
 
 -- Parrot
 vim.keymap.set('n', '<leader>pcn', ':PrtChatNew popup<CR>', { desc = 'Open new Parrot Chat on PopUp Window' })
+vim.keymap.set('n', '<leader>pcd', ':PrtChatDelete<CR>', { desc = 'Delete Current Chat' })
 vim.keymap.set('n', '<leader>pct', ':PrtChatToggle popup<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
+vim.keymap.set('n', '<leader>psc', ':PrtChatFinder<CR>', { desc = 'Parrot Search Chats' })
+vim.keymap.set('n', '<leader>pcp', ':PrtChatPaste popup<CR>', { desc = 'Paste Last Visual Selection in Last Chat' })
+vim.keymap.set('n', '<leader>pcr', ':PrtChatRespond<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
 
 -- Opening fterm
 vim.keymap.set('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open FTerm (Floating Terminal)' })

@@ -172,6 +172,10 @@ vim.opt.scrolloff = 10
 --  See `:help vim.keymap.set()`
 --
 
+-- Parrot
+vim.keymap.set('n', '<leader>pcn', ':PrtChatNew popup<CR>', { desc = 'Open new Parrot Chat on PopUp Window' })
+vim.keymap.set('n', '<leader>pct', ':PrtChatToggle popup<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
+
 -- Opening fterm
 vim.keymap.set('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open FTerm (Floating Terminal)' })
 -- Opening Neogit
@@ -1005,6 +1009,7 @@ require('lazy').setup({
   require 'kickstart.plugins.csvview',
   require 'kickstart.plugins.fterm',
   require 'kickstart.plugins.neogit',
+  require 'kickstart.plugins.parrot',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

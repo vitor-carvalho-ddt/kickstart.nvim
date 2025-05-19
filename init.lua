@@ -1007,7 +1007,7 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.persistence',
   require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.zen-mode',
   require 'kickstart.plugins.nvim-web-dev-icons',
   require 'kickstart.plugins.bufferline',

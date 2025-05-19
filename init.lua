@@ -1014,6 +1014,7 @@ require('lazy').setup({
   require 'kickstart.plugins.fterm',
   require 'kickstart.plugins.neogit',
   require 'kickstart.plugins.parrot',
+  require 'kickstart.plugins.marks',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.

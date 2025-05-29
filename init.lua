@@ -176,12 +176,12 @@ vim.opt.scrolloff = 10
 vim.keymap.set('n', '<leader>dam', ':delmarks A-Z0-9<>^[]"<CR>', { desc = 'Delete All Marks' })
 
 -- Parrot
-vim.keymap.set('n', '<leader>pcn', ':PrtChatNew popup<CR>', { desc = 'Open new Parrot Chat on PopUp Window' })
-vim.keymap.set('n', '<leader>pcd', ':PrtChatDelete<CR>', { desc = 'Delete Current Chat' })
-vim.keymap.set('n', '<leader>pcc', ':PrtChatToggle popup<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
-vim.keymap.set('n', '<leader>pcs', ':PrtChatFinder<CR>', { desc = 'Parrot Search Chats' })
-vim.keymap.set('n', '<leader>pcp', ':PrtChatPaste popup<CR>', { desc = 'Paste Last Visual Selection in Last Chat' })
-vim.keymap.set('n', '<leader>pcr', ':PrtChatRespond<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
+-- vim.keymap.set('n', '<leader>pcn', ':PrtChatNew popup<CR>', { desc = 'Open new Parrot Chat on PopUp Window' })
+-- vim.keymap.set('n', '<leader>pcd', ':PrtChatDelete<CR>', { desc = 'Delete Current Chat' })
+-- vim.keymap.set('n', '<leader>pcc', ':PrtChatToggle popup<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
+-- vim.keymap.set('n', '<leader>pcs', ':PrtChatFinder<CR>', { desc = 'Parrot Search Chats' })
+-- vim.keymap.set('n', '<leader>pcp', ':PrtChatPaste popup<CR>', { desc = 'Paste Last Visual Selection in Last Chat' })
+-- vim.keymap.set('n', '<leader>pcr', ':PrtChatRespond<CR>', { desc = 'Toggles Parrot Chat on PopUp Window' })
 
 -- Opening fterm
 vim.keymap.set('n', '<leader>ft', '<CMD>lua require("FTerm").toggle()<CR>', { desc = 'Open FTerm (Floating Terminal)' })
@@ -1017,8 +1017,9 @@ require('lazy').setup({
   require 'kickstart.plugins.csvview',
   require 'kickstart.plugins.fterm',
   require 'kickstart.plugins.neogit',
-  require 'kickstart.plugins.parrot',
+  -- require 'kickstart.plugins.parrot',
   require 'kickstart.plugins.marks',
+  require 'kickstart.plugins.avante',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
